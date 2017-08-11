@@ -1,17 +1,25 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $('.js--section-features').waypoints(function(direction) {
-        if (direction == "down") {
-            $('nav').addClass('sticky');
-        } else {
-            $('nav').removeClass('sticky');
-        }
-    }, {
-        offset: '60px';        
-    })
-    
-    $(window).scroll(function(){
-        $("header").css("opacity", 1 - $(window).scrollTop() / 250);
-    })
-    
+
+    $('.js--scroll-to-iphone').click(function () {
+        $('html,body').animate({scrollTop: $('.js--section-iphone').offset().top}, 1000);
+    });
+
 });
+    
+    
+    
+    
+    
+    
+    
+    /*
+    
+    var waypoints = $('#handler-first').waypoint(function(direction) {
+        notify(this.element.id + ' hit 25% from top of window') 
+    }, {
+        offset: '25%'
+    })
+    
+    */
+     

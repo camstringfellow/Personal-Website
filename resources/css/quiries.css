@@ -1,0 +1,60 @@
+/* Big tablet to 1200px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    .welcome-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+    
+    .row { padding: 0 2%; }
+}
+
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    
+    body { font-size: 18px; }
+    section { padding: 60px 0; }
+    
+    blockquote {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .steps-box { margin-top: 10px; }
+    .steps-box:last-child { margin-bottom: 10px; }
+    .work-step { margin-bottom: 40px; }
+    
+    .order-screen { width: 130% }
+    
+    .work {
+        list-style: none;
+        width: 100%;
+        padding-top: 30px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .work li {
+        display: block;
+        float: left;
+        width: 33%;
+        padding-left: 28px;
+        margin-bottom: 75px;
+    }
+    
+    
+}
+
+/* Small phones to small tablets: from 481px to 767px (iPhone 6/7) */
+@media only screen and (max-width: 767px) {
+    
+    
+    
+}
+
+/* Small phones: from 0 to 480px iPhone 4/5 */
+@media only screen and (max-width: 480px) {
+    
+    
+    
+}

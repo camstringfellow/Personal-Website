@@ -34,50 +34,6 @@ html {
     visibility: hidden;
 }
 
-/* ------------------------------------------- */
-/* Down arrow */
-/* ------------------------------------------- */
-
-.arrow-wrap {
-  position:absolute;
-  z-index:1;
-  left:50%;
-  top:-11em;
-  margin-left:-4em;
-  border-radius: 50%;
-  background-color: black;
-  width:10em;
-  height:10em;
-  padding:4em 2em;
-  font-size:0.5em;
-  display:block;
-}
-
-.arrow {
-  float:left;
-  position:relative;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 3em 3em 0 3em;
-  border-color: #ffffff transparent transparent;
-  -webkit-transform:rotate(360deg)
-}
-
-.arrow:after {
-  content:'';
-  position:absolute;
-  top:-3.2em;
-  left:-3em;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 3em 3em 0 3em;
-  border-color: #000 transparent transparent transparent;
-  -webkit-transform:rotate(360deg)
-}
-  
-
 
 /* ------------------------------------------- */
 /* REUSABLE COMPONENTS background: url(http://www.nxworld.net/codepen/css-scroll-down-button/bg01.jpg) center center / cover no-repeat;*/
@@ -89,12 +45,36 @@ html {
     margin: 0 auto;
 }
 
+.phone-top {
+    max-width: 1140px;
+    margin: -250px auto 10% auto;
+    color: #fff;
+    font-size: 120%;
+}
+
+.phone-row {
+    max-width: 1140px;
+    margin: 150px auto;
+}
+
 section {
     padding: 80px 0;
 }
 
 .box {
     padding: 1%;
+}
+
+.centered {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.resume {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
 }
 
 
@@ -104,7 +84,9 @@ section {
 h1,
 h4,
 h5,
+h6,
 h2,
+hphone,
 h3 {
     font-weight: 300;
     text-transform: uppercase;
@@ -113,7 +95,7 @@ h3 {
 
 h1 {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 150px;
     color: #fff;
     font-size: 240%;
     word-spacing: 4px;
@@ -128,9 +110,12 @@ h2 {
     letter-spacing: 1px;
 }
 
+
+/*-- not used --*/
 h3 {
-    margin-top: 10px;
-    font-size: 100%;
+    margin: 70px 68px;
+    font-size: 150%;
+    color: #fff;
 }
 
 h4 {
@@ -140,7 +125,6 @@ h4 {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    
 }
 
 h5 {
@@ -150,6 +134,16 @@ h5 {
     text-decoration: none;
     text-transform: uppercase; 
 }
+
+h6 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: -25px;
+    letter-spacing: 1px; 
+}
+
 
 h2:after {
     display: block;
@@ -162,10 +156,7 @@ h2:after {
 }
 
 
-
-/* --------------PARAGRAPHS-------------- /* <a class="arrow-wrap" href="#content">
-                <span class="arrow"></span>
-            </a> */ */
+/* --------------PARAGRAPHS-------------- */
 
 .long-copy {
     line-height: 145%;
@@ -178,9 +169,9 @@ h2:after {
     line-height: 145%;
 }
 
-
 /* --------------ICONS-------------- */
 
+/*- not used -*/
 .icon-big {
     font-size: 350%;
     display: block;
@@ -202,16 +193,17 @@ h2:after {
     margin-top: -5px;
 }
 
+/* -----------DOWN ARROW-------------- */
+
 .icon-arrow {
     font-size: 300%;
     display: inline-block;
     color: #fff;
     margin-left: 50%;
-    margin-top: 43%;
+    margin-top: 51%;
 }
 
 /* --------------LINKS-------------- */
-
 
 a:link,
 a:visited {
@@ -228,11 +220,11 @@ a:active {
     border-bottom: 1px solid transparent;
 }
 
-
 /* --------------BUTTONS-------------- */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -243,29 +235,30 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
     background-color: #B71C1C;
     border: 2px solid #B71C1C;
     color: #fff;
     margin-right: 15px;
 }
 
-
 .btn-ghost:link,
 .btn-ghost:visited {
     border: 2px solid #B71C1C;
     color: #fff;
-    
 }
 
 .btn:hover,
-.btn:active {
-    background-color: #B71C1C
-    
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #B71C1C  
 }
 
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active,
+input[type=submit] {
     border: 2px solid rgb(150, 28, 28);
     background-color: rgb(150, 28, 28);
 }
@@ -290,14 +283,13 @@ header {
     background-position: center;
     height: 100vh;
     background-attachment: fixed;
-    width: 100%;
-    
+    width: 100%;   
 }
 
 .welcome-text-box {
     position: absolute;
     width: 1200px;
-    top: 50%;
+    top: 52%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -313,14 +305,6 @@ header {
     display: inline-block;
 }
 
-.first-black { 
-    display: none;
-    height: 50px;
-    width: auto;
-    float: left;
-    margin: 5px 0;
-}
-
 .last {
     float: left;
     list-style: none;
@@ -332,16 +316,7 @@ header {
 
 }
 
-.last-black { 
-    display: none;
-    height: 50px;
-    width: auto;
-    float: left;
-    margin: 5px 0;
-}
-
-
-/* ---------- DOWN ARROW -------------*/
+/* ------------- DOWN ARROW ---------------*/
 
 .main-arrow {
   width:100%;
@@ -349,18 +324,18 @@ header {
   background-color:#fff;
 }
  
+
 /* --------------------------------------- */
 /* NAVIGATION */
 /* --------------------------------------- */
 
 
-
-/* ---------- MAIN NAV -------------*/
+/* ------------- MAIN NAV -----------------*/
 
 .main-nav {
     float: right;
     list-style: none; 
-    margin-top: 50px;
+    margin-top: 55px;
 }
 
 .main-nav li {
@@ -386,7 +361,7 @@ header {
 }
 
 
-/* ---------- MAIN NAV -------------*/
+/* --------------- MAIN NAV ----------------*/
 
 
 .sticky {
@@ -400,32 +375,60 @@ header {
     
 }
 
-.main-nav { margin-top: 55px; }
+.sticky .main-nav { margin-top: 55px; }
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
     padding: 16px 0;
     color: #555;
+    margin-top: 0px;
 }
 
-.sticky .first { display: none; }
-.sticky .first-black { display: block; }
+.sticky .main-nav {
+    margin-top: 20px;
+}
 
-.sticky .last { display: none; }
-.sticky .last-black { display: block; }
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 0;
+    color: #555;
+    margin-top: 0px;
+}
 
+.sticky .last li h4 {
+    color: #555;
+    margin: 10px 0;
+    
+}
+
+.sticky .first li h5 {
+    margin: 10px 0;
+}
+
+.sticky .first {
+    margin: 0px 0;
+}
+
+.sticky .last {
+    margin: 0px 0;
+    margin-left: 10px;
+}
 
 /* ------------------------------------------- */
 /* FEATURES */
 /* ------------------------------------------- */
 
-.section-features {
+.section-work {
     margin-top: -10px;
     padding-bottom: 50px;
 }
 
-.section-features .long-copy{
+.section-work .long-copy{
     margin-bottom: 50px;   
+}
+
+.section-work .div {
+    margin-top: 20%;
 }
 
 /* ------------------------------------------- */
@@ -436,7 +439,7 @@ header {
 .work {
     list-style: none;
     width: 100%;
-    padding-top: 40px;
+    padding-top: 30px;
     padding-left: 11.5%;
 }
 
@@ -445,6 +448,7 @@ header {
     float: left;
     width: 30%;
     padding-left: 28px;
+    margin-bottom: 75px;
 }
 
 .app {
@@ -452,9 +456,14 @@ header {
     margin: 0;    
     overflow: hidden;
     background-color: #000;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 0px 0px #888888;
     -webkit-transition: box-shadow 0.2s;
     transition: box-shadow 0.2s;
+    
+}
+
+.work-pg-app {
+    width: 65%;
 }
 
 .app img {
@@ -463,60 +472,69 @@ header {
     height: auto;
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
-    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: transform 0.5s, opacity 0.5s;
-    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
-    
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.2s;
+    transition: opacity 0.5s, -webkit-transform 0.2s;
+    transition: transform 0.2s, opacity 0.5s;
+    transition: transform 0.2s, opacity 0.5s, -webkit-transform 0.2s;
 }
-
-
 
 .app img:hover {
     opacity: 1;
     -webkit-transform: scale(1.15);
     transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;  
 }
 
 .app:hover {
-    box-shadow: 0px 0px 0px #888888;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 /* -----------------------------------------------------------------------------*/
 /* HOW IT WORKS */
 /* -----------------------------------------------------------------------------*/
 
-.section-steps {
+.section-iphone {
     padding: 60px 0;
     background-color: #f4f4f4
 }
 
+.steps-box img {
+   margin-left: -35%;
+}
 .steps-box:first-child {
     text-align: left;
-    padding-right: 3%;
-    margin-top: 30px;
+    padding-right: 4%;
+    margin-top: 20px;
+    width: 46%;
 }
 
 .steps-box:last-child {
-    padding-left: 3%;
-    margin-top: 70px;
+    text-align: left;
+    padding-left: -20px;
+    margin-top: 45px;    
 }
 
+.steps-box:last-of-type { padding: 10px 0; }
+
 .order-screen {
-    width: 100%;
-    margin-left: -27%;
-    margin-top: 4%;
+    width: 110%;
+    margin-left: 0%;
+    margin-top: 0%;
 }
 
 .work-step {
-    margin-bottom: 65px;
+    margin-bottom: 75px;
 }
 
-.work-step:last-of-type {
-    margin-bottom: 85px;
-    
-}
 
 
 .work-step div {
@@ -524,13 +542,19 @@ header {
     border: 2px solid #B71C1C;
     display: inline-block;
     border-radius: 50%;
-    height: 55px;
-    width: 55px;
+    height: 65px;
+    width: 65px;
     text-align: center;
-    padding: 5px;
+    padding: 11px 0px;
     float: left;
-    font-size: 150%;
-    margin-right: 25px; 
+    font-size: 160%;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    
+}
+
+.work-step p {
+    margin-top: 5px;
 }
 
 
@@ -562,16 +586,25 @@ header {
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
-    background-position: center;
-    
+    background-position: center;    
+}
+
+.blog {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/gp8blyataa0-thomas-lefebvre.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/gp8blyataa0-thomas-lefebvre.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; 
+    height: 100vh; 
 }
 
 blockquote {
     padding: 2%;
-    margin-right: 5%;
+    margin-right: 9%;
     font-style: italic;
     line-height: 145%;
     position: relative;
+    color: white;
 }
 
 blockquote:before {
@@ -588,7 +621,7 @@ blockquote:after {
     display: block;
     font-size: 400%;
     position: absolute;
-    bottom: 55px;
+    bottom: 45px;
     right: 20px;
 }
 
@@ -605,11 +638,9 @@ cite img {
     vertical-align: middle;
 }
 
-
 /* ------------------------------------------- */
 /* FOOTER */
 /* ------------------------------------------- */
-
 
 footer {
     background-color: #333;
@@ -689,5 +720,323 @@ footer p {
     margin-top: 20px;
 }
 
+/* -----------------------------------------------------------------------------------------*/
+/* ---------------------------------------ABOUT ME SECTION ---------------------------------*/
+/* -----------------------------------------------------------------------------------------*/
 
+/* ----------------HEADER--------------------- */
+
+.header-about {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/Columbia_SC_Finlay_Park.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/Columbia_SC_Finlay_Park.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    background-attachment:scroll;
+    width: 100%;   
+}
+
+/* ------------ Headshot Picture ------------- */
+
+headshot {
+    margin-top: -70px;
+    text-align: center;
+    display: block;
+}
+
+headshot img {
+    height: 200px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid #fff;
+}
+
+/* ------------ About Me Section ------------- */
+
+.about-me {
+    margin-top: -30px
+}
+
+.about-position {
+    padding: 15px 15%;
+}
+
+about-text {
+    box-sizing: border-box;
+    font-style: normal;
+    line-height: 180%;
+}
+
+.about-title {
+    padding-top: 30px;
+}
+
+button {
+    font-weight: 300;
+    font-size: 120%;
+    letter-spacing: 1px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    outline: none;
+}
+
+button:hover {
+    font-weight: 400;
+}
+
+job-name {
+    font-weight: 300;
+    font-size: 120%;
+    letter-spacing: 1px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+job-name:hover {
+    font-weight: 400;
+}
+
+.experience p {
+    color: #B71C1C;
+}
+
+.exp-box:first-child {
+    text-align: center;
+    margin-left: -15%;
+    width: 60%; 
+}
+
+.exp-box:last-child {
+    text-align: center;
+    margin-right: -20%;
+    margin-left: 10%;
+    width: 65%;
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/* -------------------------------------- WORK SECTION -------------------------------------*/
+/* -----------------------------------------------------------------------------------------*/
+
+/* ----------------HEADER--------------------- */
+
+.header-work {
+    background-image: none; 
+    height: 5vh;
+}
+
+/* ------------ WORK ------------- */
+
+.work-tiles {
+    margin-top: 20px;
+    margin-bottom: 0%;
+    height: 210vh;
+}
+
+.project-list {
+    display: block;
+    float: left;
+    width: 210%;
+    padding-left: 10px;
+    margin-top: 85px;
+    margin-left: -30px;
+    font-size: 140%;
+}
+
+.work h6 {
+    display: block;
+    margin-right: 123px;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    letter-spacing: 1px; 
+}
+
+.work-tiles div {
+    margin-bottom: -10px;
+}
+
+.work-underline:after {
+    height: 2px;
+    background-color: #B71C1C;
+    width: 332px;
+    margin-bottom: 0px;
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/* -------------------------------------- BLOG SECTION -------------------------------------*/
+/* -----------------------------------------------------------------------------------------*/
+
+.blog-back-btn {
+    margin-right: 40px;
+    margin-top: 50px;
+    text-align: center; 
+}
+
+.blog-box-page {
+    width: 65%;
+    margin-top: 15%;
+    text-align: center; 
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/* -------------------------------------- IPHONE REPAIR ------------------------------------*/
+/* -----------------------------------------------------------------------------------------*/
+
+.header-iphone {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/iphone-picture.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/iphone-picture.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    background-attachment:scroll;
+    width: 100%;   
+}
+
+.iphone-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=phone],
+input[type=email],
+select,
+textarea {
+    width: 80%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+*:focus{outline: none;}
+
+
+/* -----------------------------------------------------------------------------------------*/
+/* -------------------------------------- POPUP SCREEN ------------------------------------*/
+/* -----------------------------------------------------------------------------------------*/
+
+
+/* Popup container */
+.popup { 
+    -webkit-transform: translate(0, -150%); 
+    transform: translate(0, -150%);
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+    
+}
+
+.popup.is-open {
+    opacity: 1;
+}
+
+
+.popup.is-active {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.popup--default {
+    padding: 40px;
+    background-color: rgba(21,24,30,0.9);
+}
+
+.popup--content {
+    display: table;
+}
+
+.popup--content .popup--content-image {
+    border-radius: 3px 0 0 3px;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+/* --- 
+
+<div class="container no-admin-bar is-relarive>
+::before // .container:before
+
+--- */
+
+.container:before, .container:after, header:before, header:after,
+.group:before, .group:after, .row:before, .row:after {
+    content: " ";
+    display: table
+}
+
+.container:after, header:after, .group:after, .row:after {
+    clear: both
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    position: relative
+}
+
+/* --- 
+
+looking for "is-relative"
+
+--- */
+
+.modal--default .container.is-relative {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 95%;
+    position: relative;
+    top: 0;
+    left: 0
+}
+
+.modal--content {
+    display: table
+}
+
+@media screen and (min-width: 1025px) {
+    .modal--content .modal--content-group {
+        width: 70%;
+        display: table-cell;
+        vertical-align: top
+    }
+}
+
+.modal--content .modal--content-group.benefits-content {
+    border-left: 1px solid #dfe0e1
+}
+
+.modal--content-header {
+    padding: 33px 30px 0 30px;
+    position: relative
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+
+.modal--team .member-name, .modal--team .member-title, .modal--team .member-spots {
+    text-transform: uppercase
+}
+
+.modal--team .member-title {
+    color: #7a848d;
+    margin-bottom: 4px
+}
 

@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
     
-    
     <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/Grid.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/quiries.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-        <title>CTS Productions</title>
+        <title>Cameron Stringfellow</title>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="resources/favicons/manifest.json">
+        <link rel="mask-icon" href="resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="resources/favicons/favicon.ico">
+        <meta name="msapplication-config" content="resources/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="sticky">
                 <div class="row">
                     <ul class="first">
                         <li><h5>Cameron</h5></li>
@@ -21,76 +34,92 @@
                         <li><h4>Stringfellow</h4></li>
                     </ul>
                     <ul class="main-nav">
-                        <li><a href="#work">Work</a> </li>
-                        <li><a href="#blog">Blog</a> </li>
-                        <li><a href="#about">About</a> </li>
-                        <li><a href="#contact">Contact</a> </li>
+                        <li><a href="index.html">Home</a> </li>
+                        <li><a href="work.html">Work</a> </li>
+                        <li><a href="about.html">About</a> </li>
+                        <li><a href="phone.html">Phone repair</a> </li>
                     </ul>
                 </div>
             </nav>
             <div class="welcome-text-box">
-                <h1>Welcome to my site. <br> Check out my work.</h1>
-                <a class="btn btn-full" href="#">Projects</a>
-                <a class="btn btn-ghost" href="#iphone">iPhone Repair</a>
+                <h1>Software Developer<br>
+                    Graphic Designer<br>
+                    Entrepreneur </h1>
+                <!--
+                <h3>or</h3>
+                <a class="btn btn-ghost js--scroll-to-iphone" href="#iphone">Fix my iPhone</a>
+                -->
             </div> 
             
             <i class="ion-ios-arrow-down icon-arrow"></i>
             
         </header>
             
-        <section class="section-features js--section-features" id="work">
-                
+        <section class="section-work">
                 <div class="row">
                     <h2>Recent Work</h2>
                 </div>
-
                 <ul class="work">
                     <li>
                         <figure class="app">
-                            <img src="resources/img/swift.png" alt="iphone app">
+                            <a href="work.html">
+                                <img src="resources/img/swift.png" alt="iphone app">
+                            </a>
                         </figure>         
                     </li>
                     <li>
                         <figure class="app">
-                            <img src="resources/img/python1.png" alt="website">
+                            <a href="work.html">
+                                <img src="resources/img/python1.png" alt="website">
+                            </a>
                         </figure>         
                     </li>
                     <li>
                         <figure class="app">
-                            <img src="resources/img/htmlcss.png" alt="map app">
+                            <a href="work.html">
+                                <img src="resources/img/htmlcss.png" alt="map app">
+                            </a>
                         </figure>         
                     </li>
                 </ul>
-            
                 <div class="row">
-                    <div class="col span-1-of-3 box">
-                        
-                        <i class="ion-android-compass icon-big"></i>
-                        <h3>Section 2</h3>
-                        <p>
-                            Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.       
-                        </p>
-                    </div>
-                    <div class="col span-1-of-3 box">
-                        <i class="ion-social-buffer icon-big"></i>
-                        <h3>Section 3</h3>
-                        <p>
-                            Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.    
-                        </p>
-                    </div>
-                    <div class="col span-1-of-3 box">
-                        <i class="ion-code icon-big"></i>
-                        <h3>Section 4</h3>
-                        <p>
-                            Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.   
-                        </p>
+                    <div class="centered">
+                        <a class="btn btn-full" href="work.html">View More</a>
                     </div>
                 </div>
         </section>
     
-        <section class="section-steps" id="iphone">
+        
+        <section class="section-blog" id="blog">
             <div class="row">
-                <h2>iPhone Repair &mdash; Simple as 1, 2, 3</h2>
+                <h2>repair reviews</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3 blog-box">
+                    <blockquote>
+                        Cheaper and faster than the competitors   
+                        <cite><img src="resources/img/maddie.jpg">Maddie Palmer</cite>
+                    </blockquote>
+                </div>
+                <div class="col span-1-of-3 blog-box">
+                    <blockquote>
+                        The best iPhone repair service in Columbia
+                        <cite><img src="resources/img/bill.jpeg">Bill Patton</cite>
+                    </blockquote>
+                </div>
+                <div class="col span-1-of-3 blog-box">
+                    <blockquote>
+                         I've broken my phone 5 times and he's fixed all of them 
+                        <cite><img src="resources/img/ben.jpg">Ben Spinek</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="section-iphone js--section-iphone">
+            <div class="row">
+                <h2>iPhone Repair</h2>
             </div>
             <div class="row">
                 <div class="col span-1-of-2 steps-box">
@@ -99,7 +128,7 @@
                 <div class="col span-1-of-2 steps-box">
                     <div class="work-step">
                         <div>1</div>
-                        <p>Select what type of iPhone you have.</p>
+                        <p>Select what type of iPhone you have. (iPhone 5/5S, iPhone 6/6S, etc.)</p>
                     </div>
                     <div class="work-step">
                         <div>2</div>
@@ -109,15 +138,19 @@
                         <div>3</div>
                         <p>Click sumbit and pay for the part. Once the part arrives, come in and get it fixed!</p>
                     </div>
-                    
-                    <a class="btn btn-full" href="#">iPhone Repair</a>
-                    
                 </div>
-               
             </div>
         
+            <div class="row">
+                <div class="centered">
+                    <a class="btn btn-full" href="phone.html">iPhone Repair</a>
+                </div>
+            </div>
         
         </section>
+        
+        
+        <!--------------------- PROJECTS PAGE -----------------
         
         <section class="section-my-work">
             <div class="row">
@@ -159,63 +192,19 @@
             </div>
 
         </section>
-        
-        <!-- BLOG SECTION --------------
-        
-        <section class="section-blog" id="blog">
-            <div class="row">
-                <h2>Blog</h2>
-            </div>
-            <div class="row">
-                <div class="col span-1-of-3 blog-box">
-                    <blockquote>
-                         Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                        <cite><img src="resources/img/Cam.JPG">Cameron Stringfellow</cite>
-                    </blockquote>
-                </div>
-                <div class="col span-1-of-3 blog-box">
-                    <blockquote>
-                         Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                        <cite><img src="resources/img/Cam.JPG">Cameron Stringfellow</cite>
-                    </blockquote>
-                </div>
-                <div class="col span-1-of-3 blog-box">
-                    <blockquote>
-                         Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                        <cite><img src="resources/img/Cam.JPG">Cameron Stringfellow</cite>
-                    </blockquote>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section-plans">
-            <div class="row">
-                <h2>Sign up</h2>
-            </div>
-            <div class="row">
-                <div class="col span-1-of-3">
-                    <div class = "plan-box">
-                        <div>
-                        
-                        </div>    
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        ---END BLOG------------------>
 
+        ---------------------- PROJECTS PAGE END --------------------->
+            
         <footer>
             <div class="row">
                 <div class="col span-1-of-2">
                     <ul class="footer-nav">
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a> </li>
+                        <li><a href="work.html">Work</a> </li>
+                        <li><a href="about.html">About</a> </li>
+                        <li><a href="phone.html">Phone Repair</a> </li>
                     </ul>
                 </div>
-                
                 <div class="col span-1-of-2">
                     <ul class="social-links">
                         <li><a href="https://www.facebook.com/cam.stringfellow.3"><i class="ion-social-facebook"></i></a></li>
@@ -223,7 +212,6 @@
                         <li><a href="https://www.linkedin.com/in/cameron-stringfellow-a032bb95/"><i class="ion-social-linkedin"></i></a></li>
                         <li><a href="#"><i class="ion-social-instagram"></i></a></li>
                     </ul>
-                
                 </div>
             </div>
             <div class="row">
@@ -234,13 +222,17 @@
         
         </footer>
         
-        
+    <!--------------------------- JAVA SCRIPTS ------------------------->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
     <script src="vendors/js/jquery.waypoints.min.js"></script> 
     <script src="resources/js/script.js"></script>
-        
-        
+ 
     </body>
-
+    
 
 </html>
 
