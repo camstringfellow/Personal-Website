@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 
 
 var popWind = document.getElementById("myPopup");
@@ -22,7 +22,7 @@ window.onclick = function(event) {
 
 
 
-
+});
 
 
 
